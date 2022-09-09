@@ -1,5 +1,6 @@
 require('dotenv').config();
 const morgan = require('morgan');
+const cors = require('cors');
 
 
 
@@ -17,6 +18,7 @@ app.use(express.json())
 
 app.use(fileUpload());
 app.use(morgan('dev'));
+app.use(cors());
 
 //llamar middlware
 
@@ -36,6 +38,7 @@ const editProduct = require ('./controllers/users/editProduct');
 const deleteProduct = require ('./controllers/users/deleteProduct');
 const getProduct = require('./controllers/users/getproduct');
 const search = require ('./controllers/users/search');
+const totalProduct = require('./controllers/users/totalproduct');
 
 
 
@@ -47,6 +50,8 @@ app.put ('/editProduct/:idProduct',authUser, editProduct);
 app.delete ('/deleteProduct/:idProduct',authUser,productExist ,deleteProduct);
 
 app.get ('/getProduct/:idProduct',productExist, getProduct);
+
+app.get ('/totalProduct',totalProduct);
 
 app.get ('/search',search);
 
