@@ -16,6 +16,8 @@ const { PORT }= process.env;
 const app = express(); // aqui lo ejecuto!!!
 app.use(express.json())
 
+app.use(express.static('static/upload'));
+
 app.use(fileUpload());
 app.use(morgan('dev'));
 app.use(cors());
