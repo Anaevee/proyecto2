@@ -8,7 +8,7 @@ export const Cart = (cat) => {
         <figure className='divImagenArticulo'>
           <img
             className='articuloImagen'
-            src={`http://localhost:3000/${cat.articulo.namePhoto}`}
+            src={`http://localhost:5000/${cat.articulo.namePhoto}`}
             alt={`${cat.articulo.namePhoto}`}
           />
         </figure>
