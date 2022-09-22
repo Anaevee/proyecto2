@@ -7,8 +7,8 @@ import Carousel from 'react-bootstrap/Carousel';
 <Carousel>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="25231.png"
+          className="fotocarrusel"
+          src="12.jpeg"
           
           alt="First slide"
         />
@@ -19,8 +19,8 @@ import Carousel from 'react-bootstrap/Carousel';
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="25231.png"
+          className="fotocarrusel"
+          src="12.jpeg"
           alt="Second slide"
         />
 
@@ -31,8 +31,8 @@ import Carousel from 'react-bootstrap/Carousel';
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="25231.png"
+          className="fotocarrusel"
+          src="12.jpeg"
           alt="Third slide"
         />
 

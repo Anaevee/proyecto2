@@ -1,7 +1,7 @@
 import React from "react";
 import { useState,useEffect } from "react";
 import { get } from '../api/get';
-import { Cart } from './Cart';
+import { GrupoCard } from './Card';
 
 export const SeleccionArticulos =() =>{
 const [ articulo, setArticulos] = useState ([]);
@@ -17,8 +17,8 @@ return (
         {articulo.length > 0 &&
         articulo.map ((art,index) => {
             return (
-                <Cart
-                id='cart'
+                <GrupoCard
+                id='GrupoCard'
                 key={index}
                 articulo={art}
                 />
