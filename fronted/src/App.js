@@ -5,6 +5,7 @@ import  MainPage  from './pages/MainPage';
 import SecondMain  from './pages/SecondPage';
 import {Header} from './Component/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {ArticuloMain} from './pages/Articulo';
 
 
 
@@ -14,7 +15,9 @@ function App() {
      <BrowserRouter>
      <Header/>
      <Routes>
-            <Route path= '/SecondPage' element = {<SecondMain />} />
+            <Route path= '/producto/:idProduct' element = {<ArticuloMain />} />
+            <Route path='/search' element = {<MainPage/>} />
+            <Route path='/carrito' element = {<MainPage/>} />
             <Route path='/' element={<MainPage />} />
       </Routes>
 

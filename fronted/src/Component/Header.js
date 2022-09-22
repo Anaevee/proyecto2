@@ -28,19 +28,19 @@ import { Menu } from './Menu';
         <aside
        className='botonesMain' >
         <button type="button" className= "btn btn-outline-dark">Pulseras
-            <Link to= './categorias'></Link>
+            <Link to= '/categorias'></Link>
         </button>
         <button type="button" className= 'btn btn-outline-dark'>Anillos
-        <Link to= './categorias'></Link>
+        <Link to= '/categorias'></Link>
         </button>
         <button type="button" className= 'btn btn-outline-dark'>Pendientes
-        <Link to= './categorias'></Link>
+        <Link to= '/categorias'></Link>
         </button>
         <button type="button" className='btn btn-outline-dark'>Collares
-        <Link to= './categorias'></Link>
+        <Link to= '/categorias'></Link>
         </button>
         <button type="button" className='btn btn-outline-dark'>Colleciones
-        <Link to= './categorias'></Link>
+        <Link to= '/categorias'></Link>
         </button>
         <button type="button" className= 'btn btn-outline-dark'>Hand make by kei
         <Link to ='*/'></Link>
