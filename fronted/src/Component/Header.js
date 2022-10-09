@@ -22,28 +22,22 @@ export const Header = () => {
       </nav>
       <aside className='botonesMain'>
         <button type='button' className='btn btn-outline-dark'>
-          Pulseras
-          <Link to='/categorias'></Link>
+          <Link to='/search?search=pulseras'>Pulseras</Link>
+        </button>
+        <button  className='btn btn-outline-dark'>
+          <Link to='/search?search=anillos'>Anillos</Link>
         </button>
         <button type='button' className='btn btn-outline-dark'>
-          Anillos
-          <Link to='/categorias?search=anillos'></Link>
+          <Link to='/search?search=pendientes'>Pendientes</Link>
         </button>
         <button type='button' className='btn btn-outline-dark'>
-          Pendientes
-          <Link to='/categorias'></Link>
+          <Link to='/search?search=collares'>Collares</Link>
         </button>
         <button type='button' className='btn btn-outline-dark'>
-          Collares
-          <Link to='/categorias'></Link>
+          <Link to='/search?search=Colleciones'>Colleciones</Link>
         </button>
         <button type='button' className='btn btn-outline-dark'>
-          Colleciones
-          <Link to='/categorias'></Link>
-        </button>
-        <button type='button' className='btn btn-outline-dark'>
-          Hand make by kei
-          <Link to='*/'></Link>
+          <Link to='/search?search=Hand make by kei'>Hand make by kei</Link>
         </button>
       </aside>
     </header>

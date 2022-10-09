@@ -51,7 +51,6 @@ const search = async ( req, res, next) =>{
            ); 
             
         } 
-        console.log (search);
         if ( items.length < 1){
             const error = new Error ('No hay elementos que coincidan con la busqueda');
             error.httpStatus = 404 ;
