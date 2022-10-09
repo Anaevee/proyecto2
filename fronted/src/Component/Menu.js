@@ -13,17 +13,17 @@ const menuToogle = (e) =>{
   e.preventDefault();
   setToggle(!toggle);
 }
-console.log(toggle);
+
   return (
     <Navbar   bg="light" expand="lg" >
       <Container className="Menu">
-        <Navbar.Brand href="#home">Home</Navbar.Brand>
+        <Navbar.Brand to={'/'}>Home</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">carrito</Nav.Link>
-            <Nav.Link href="#link">login</Nav.Link>
-            <Nav.Link href="#link">search</Nav.Link>
+            <Nav.Link to="#home">carrito</Nav.Link>
+            <Nav.Link to="#link">login</Nav.Link>
+            <Nav.Link to='/search?search=anillos'>search</Nav.Link>
             {/* <NavDropdown title="Menu" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
