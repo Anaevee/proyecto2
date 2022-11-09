@@ -3,58 +3,57 @@ import { Link } from 'react-router-dom';
 
 export const Footer = () => {
     return (
-        <section className="footer">
-		<div className="container">
-			<div className="row text-center text-xs-center text-sm-left text-md-left">
-				<div className="col-xs-12 col-sm-4 col-md-4">
-					<h5>CONTACT</h5>
-					<ul className="list-unstyled quick-links">
-						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
-						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
-						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Videos</a></li>
-					</ul>
-				</div>
-				<div className="col-xs-12 col-sm-4 col-md-4">
-					<h5>Quick links</h5>
-					<ul class="list-unstyled quick-links">
-						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
-						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
-						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Videos</a></li>
-					</ul>
-				</div>
-				<div class="col-xs-12 col-sm-4 col-md-4">
-					<h5>Quick links</h5>
-					<ul class="list-unstyled quick-links">
-						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
-						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
-						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-						<li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
-					</ul>
-				</div>
-			</div>
-			<div className="row">
-				<div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-					<ul className="list-unstyled list-inline social text-center">
-						<li className="list-inline-item"><Link to="https://www.fiverr.com/share/qb8D02" className="fa fa-facebook"></Link></li>
-						<li className="list-inline-item"><Link to="https://www.fiverr.com/share/qb8D02" className="fa fa-twitter"></Link></li>
-						<li className="list-inline-item"><Link to="https://www.fiverr.com/share/qb8D02" className="fa fa-instagram"></Link></li>
-					</ul>
-				</div>
-				
-			</div>	
-			<div className="row">
-				<div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-					<p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
-					<p className="h6">© All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
-				</div>
-			
-			</div>	
-		</div>
-	</section>
-    );
-};
+        <section className='footer'>
+  <footer className='bg-light text-danger text-center'>
+    <div className='container p-4'>
+      <div class="row">
+        <div className='col-lg-6 col-md-12 mb-4 mb-md-0'>
+          <h5 className='text-uppercase text-danger'>Sobre Nosotros</h5>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+            molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+            aliquam voluptatem veniam, est atque cumque eum delectus sint!
+          </p>
+        </div>
+
+        <div className='col-lg-3 col-md-6 mb-4 mb-md-0'>
+          <h5 className='text-uppercase text-danger'>CONTACT</h5>
+
+          <ul className='list-unstyled mb-0'>
+            <li >
+            <i className='fas fa-home me-3 text-secondary'></i>
+              <a href="#!" className='text-danger'>Email</a>
+            </li>
+            <li>
+              <a href="#!" className='text-danger'>Telefono</a>
+            </li>
+          </ul>
+        </div>
+
+        <div className='col-lg-3 col-md-6 mb-4 mb-md-0'>
+          <h5 className='text-uppercase mb-0 text-danger'>SOCIALMEDIA</h5>
+
+          <ul className='list-unstyled'>
+            <li>
+            <a href="#!" className='text-danger'>Instagram</a>
+              <i class="fas fa-camera fa-xs"></i>
+              
+            </li>
+            <li>
+              <a href="#!" className='text-danger'>Facebook</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div className='text-center p-3'>
+      © 2020 Copyright:
+      <Link className='text-danger' to="https://mdbootstrap.com/">MDBootstrap.com</Link>
+    </div>
+  </footer>
+ 
+</section>
+	);
+	}

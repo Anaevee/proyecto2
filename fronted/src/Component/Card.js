@@ -3,8 +3,24 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import CardGroup from 'react-bootstrap/CardGroup';
 import { Link } from 'react-router-dom';
+import { useLocalStorage } from '../hooks/UseLocalStore';
+import { useContext } from 'react';
+import { Carrito } from '../App';
 
  export const GrupoCard = (art) => {
+
+  const [interes ,setInteres] = useContext(Carrito);
+
+  const botonCarrito = (e) => {
+    e.preventDefault ();
+    setInteres([...interes ,art.articulo.id]);
+    console.log(art.articulo.id);
+  }
+
+  
+
+  
+  
 
   return (
     
@@ -14,7 +30,7 @@ import { Link } from 'react-router-dom';
           <Card.Title >{`${art.articulo.brand}`}</Card.Title>
           <Card.Text>{`${art.articulo.price} €`}
           </Card.Text>
-          <Button type="button" variant="primary">Añadir al carrito</Button>
+          <Button onClick={botonCarrito}  type="button" variant="primary">Añadir al carrito</Button>
         </Card.Body>
         <Card.Footer>
         {/* <Button type="button" variant="primary">Ver más */}
