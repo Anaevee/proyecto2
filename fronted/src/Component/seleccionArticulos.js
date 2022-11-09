@@ -10,7 +10,7 @@ useEffect (() => {
     get('http://localhost:5000/totalProduct', listaArticulosDelServidor);
 
 }, []);
-//console.log (articulo.length);
+
 console.log (articulo);
 return (
     <section id= 'productosAleatorios'>

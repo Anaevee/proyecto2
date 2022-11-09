@@ -16,15 +16,14 @@ const menuToogle = (e) =>{
 
   return (
     <Navbar   bg="light" expand="lg" >
-      <Container className="Menu">
-        <Navbar.Brand to={'/'}>Home</Navbar.Brand>
+      <Container className="btn-group dropright">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link to="#home">carrito</Nav.Link>
+            <Nav.Link ><Link to='/carrito'>Carrito</Link></Nav.Link>
             <Nav.Link to="#link">login</Nav.Link>
             <Nav.Link to='/search?search=anillos'>search</Nav.Link>
-            {/* <NavDropdown title="Menu" id="basic-nav-dropdown">
+             {/* <NavDropdown title="Menu" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
@@ -34,9 +33,9 @@ const menuToogle = (e) =>{
               <NavDropdown.Item href="#action/3.4">
                 Separated link
               </NavDropdown.Item>
-            </NavDropdown> */}
-          </Nav>
-        </Navbar.Collapse>
+            </NavDropdown>  */}
+           </Nav>
+        </Navbar.Collapse> 
       </Container>
     </Navbar>
   );

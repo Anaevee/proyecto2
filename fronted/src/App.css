@@ -4,28 +4,45 @@
 
  
   #titulo{ 
-    color: #040404; 
-    font-family: "Great Vibes";
-    font-size: 80px;
-    line-height: 80px; 
-    font-weight: normal; 
-    margin-bottom: 0px; 
-    margin-top: 40px; 
-    text-align: center; 
-    text-shadow: 0 1px 1px #fff; }
+    font-family:'Pacifico', cursive;
+    font-size: 60px;
+    line-height: 60px;
+    margin-top: 40px;
+    text-align: center;
+    text-shadow: 4px 4px 4px #aaa;
+     }
 
 
     .navbar.navbar-expand-lg.navbar-light.bg-light{
       justify-content: flex-end;
+      flex-direction: row;
+      width: 100%;
     }
+
+   .me-auto.navbar-nav{
+    justify-content: flex-end;
+    flex-direction: row;
+    width: 100%;
+   }
 
   .Menu.container{
     justify-content: flex-end;
     margin: 0px !important;
     width: fit-content;
     block-size: fit-content;
+
   }
 
+  .gradient-custom {
+    /* fallback for old browsers */
+    background: #6a11cb;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+    }
 
   .botonesMain{
     justify-content: space-between;
@@ -172,7 +189,7 @@ main{
   
   .footer h5{
     padding-left: 10px;
-      border-left: 3px solid black;
+    
       padding-bottom: 6px;
       margin-bottom: 20px;
       color:black;
