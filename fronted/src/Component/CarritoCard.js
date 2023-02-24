@@ -3,7 +3,14 @@ import { get } from '../api/get';
 import { Carrito } from '../App';
 
 
-export const CarritoCard = ({value}) =>{
+export const CarritoCard = ({value, setPrecioTotal}) =>{
+
+  const [cantidad,setCantidad] = useState(1);
+
+  const handlerQuantity = (e) => {
+    e.preventDefault ();
+    setPrecioTotal(MinArticulo.price * cantidad)
+  }
 
   const [valorArticulo,setValorArticulo] = useState();
   useEffect (() => {
@@ -15,7 +22,6 @@ export const CarritoCard = ({value}) =>{
   },[]);
 
  const MinArticulo = valorArticulo && valorArticulo.getProduct[0];
-  console.log(valorArticulo);
       return(
         <>
         {valorArticulo && (
@@ -56,23 +62,24 @@ export const CarritoCard = ({value}) =>{
               <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
                 <div className="d-flex mb-4" >
                   <button className="btn btn-primary px-3 me-2"
-                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                    <i className="fas fa-minus"></i>
+                    onClick={()=> setCantidad(cantidad-1 )}>
+                    <i className="fas fa-minus">-</i>
                   </button>
 
                   <div className="form-outline">
-                    <input id="form1" min="1" name="quantity" value="1" type="number" className="form-control" />
-                    <label className="form-label" htmlFor="form1">Cantidad</label>
+                    <input id="form1" min="1" name="quantity" value={cantidad} type="number" className="form-control" />
+                    <label className="form-label" htmlFor="form1">{cantidad}</label>
                   </div>
 
                   <button className="btn btn-primary px-3 ms-2"
-                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                    <i className="fas fa-plus"></i>
+                    onClick={()=> setCantidad(cantidad+1 )}
+                    >
+                    <i className="fas fa-plus">+</i>
                   </button>
                 </div>
 
                 <p className="text-start text-md-center">
-                  <strong>{MinArticulo.price}€</strong>
+                  <strong>{MinArticulo.price * cantidad}€</strong>
                 </p>
               </div>
             </div>

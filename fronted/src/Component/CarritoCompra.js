@@ -1,4 +1,4 @@
-import  React  from 'react';
+import  React, { useState }  from 'react';
 import Container from 'react-bootstrap/Container';
 import { useContext } from 'react';
 import { Carrito } from '../App';
@@ -9,8 +9,10 @@ import { CarritoCard } from './CarritoCard';
 export const CarritoCompra = () => {
 
  const [interes ,setInteres] = useContext(Carrito);
+const [precioTotal, setPrecioTotal] = useState(0);
+ console.log(precioTotal);
 
- console.log(interes);
+
  
 
 // const botonCarrito = (e) => {
@@ -31,7 +33,7 @@ return (
       {interes.length >0 &&
       interes.map((value,i)=>{
         return(
-        <CarritoCard key={i} value={value}></CarritoCard>
+        <CarritoCard key={i} value={value} preciocantidad= {setPrecioTotal}></CarritoCard>
         )
 
       }
@@ -61,7 +63,7 @@ return (
                     <p className="mb-0">(including VAT)</p>
                   </strong>
                 </div>
-                <span><strong>$53.98</strong></span>
+                <span><strong>{precioTotal}</strong></span>
               </li>
             </ul>
 

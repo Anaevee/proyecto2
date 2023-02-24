@@ -21,7 +21,7 @@ const menuToogle = (e) =>{
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link ><Link to='/carrito'>Carrito</Link></Nav.Link>
-            <Nav.Link to="#link">login</Nav.Link>
+            <Nav.Link><Link to='/login'>login</Link></Nav.Link>
             <Nav.Link to='/search?search=anillos'>search</Nav.Link>
              {/* <NavDropdown title="Menu" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

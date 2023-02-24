@@ -11,7 +11,6 @@ useEffect (() => {
 
 }, []);
 
-console.log (articulo);
 return (
     <section id= 'productosAleatorios'>
         {articulo.length > 0 &&

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainPage from './pages/MainPage';
@@ -12,6 +12,24 @@ import { Error } from './pages/404';
 import {useLocalStorage} from './hooks/UseLocalStore';
 import {useForm} from 'react-hook-form';
 import { CarritoCompra } from './Component/CarritoCompra';
+import { Login } from './Component/Login';
+import {useCookies} from 'react-cookie';
+
+export const Token = createContext()
+
+export function DashBoard () {
+
+  const [cookies,setCookie,removeCookie] = useCookies('[token]');
+  let [authenticated,setAuthenticated] = useState(cookies.token  !== undefined)
+
+  return(
+    <Token.Provider value={{authenticated,setAuthenticated}}></Token.Provider>
+  )
+
+}
+
+
+
 
 
 export const Carrito = React.createContext([]);
@@ -38,6 +56,7 @@ function App() {
           <Route path='/producto/:idProduct' element={<ArticuloMain />} />
           <Route path='/search' element={<SearchArticuloMain />} />
           <Route path='/categorias' element={<SecondPage />} />
+          <Route path='/login' element={<Login />} />
           <Route path='/carrito' element={<CarritoProducto><CarritoCompra /></CarritoProducto>} />
           <Route path='/' element={<CarritoProducto><MainPage/></CarritoProducto>} />
           <Route path='*' element={<Error />} />
